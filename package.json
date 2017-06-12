@@ -21,7 +21,11 @@
     "@angular/platform-browser": "4.2.1",
     "@angular/platform-browser-dynamic": "4.2.1",
     "@angular/router": "4.2.1",
-    "core-js": "^2.4.1",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "2.0.3",
+    "@ngrx/router-store": "1.2.6",
+    "@ngrx/store": "2.2.2",
+    "core-js": "2.4.1",
     "rxjs": "5.4.0",
     "zone.js": "0.8.12"
   },
