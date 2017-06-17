@@ -1,0 +1,30 @@
+<div class="row justify-content-md-center">
+  <div class="col-md-6">
+    <h1>
+      Let's play
+    </h1>
+    <p>
+      My number is between {{game.rangeMinValue}} - {{game.rangeMaxValue}}.<br>
+      You have maximum 3
+    </p>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <app-bs-input
+        label="Tip"
+        id="tip"
+        type="number"
+        [group]="form"
+        controlName="tip"
+        [errors]="errors.tip">
+
+      </app-bs-input>
+
+      <app-alert [error]="message"></app-alert>
+
+      <button type="submit" class="btn btn-primary"
+              [disabled]="!form.valid">Guess
+      </button>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="row justify-content-md-center">
+  <div class="col-md-6">
+    <h1>Login</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <app-bs-input
+        label="Username"
+        id="username"
+        [group]="form"
+        controlName="username"
+        [errors]="errors.username">
+
+      </app-bs-input>
+
+
+      <app-bs-input
+        label="Password"
+        id="password"
+        type="password"
+        [group]="form"
+        controlName="password"
+        [errors]="errors.password">
+      </app-bs-input>
+
+      <app-alert [error]="error$ | async"></app-alert>
+
+      <button type="submit" class="btn btn-primary"
+              [disabled]="!form.valid">Login
+      </button>
+      <button type="button" class="btn btn-link" (click)="register()">Register</button>
+    </form>
+
+  </div>
+</div>

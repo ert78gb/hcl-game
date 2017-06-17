@@ -1,0 +1,17 @@
+<div class="form-group"
+     [formGroup]="group"
+     [ngClass]="{'has-danger':showErrors()}">
+
+  <label [for]="id" class="form-control-label">{{label}}</label>
+
+  <input [type]="type"
+         class="form-control"
+         [id]="id"
+         [placeholder]="label"
+         [formControlName]="controlName">
+
+  <div class="form-control-feedback"
+       *ngFor="let errorText of errorTexts()">
+    {{errorText}}
+  </div>
+</div>

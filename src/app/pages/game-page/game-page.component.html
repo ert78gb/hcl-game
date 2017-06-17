@@ -1,0 +1,10 @@
+<app-game-welcome *ngIf="showWelcome$ | async" (start)="startNewGame()"></app-game-welcome>
+
+<app-play-game *ngIf="showPlay$ | async"
+               [game]="game$ | async"
+               [message]="message$ | async"
+               (tip)="tip($event)"></app-play-game>
+
+<app-win-game *ngIf="showWin$ | async" [game]="game$ | async" (newGame)="startNewGame()"></app-win-game>
+
+<app-game-over *ngIf="showGameOver$ | async" [game]="game$ | async" (newGame)="startNewGame()"></app-game-over>
