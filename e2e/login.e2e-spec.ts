@@ -4,7 +4,7 @@ import { clearLocalStore, saveTestUserInLocalStore } from './helpers/util';
 
 import { LoginPage } from './page-objects/login.po';
 
-describe('hcl-game App', () => {
+describe('hcl-game Login', () => {
   const testUser = {
     username: 'testUser',
     password: 'testUser112_'
