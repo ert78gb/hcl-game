@@ -7,3 +7,9 @@ export function clearLocalStore() {
 export function saveUserInLocalStore(user: User) {
   return window.localStorage.setItem('logged_user', JSON.stringify(user));
 }
+
+export function saveTestUserInLocalStore(user: User) {
+  const dictionary: { [id: string]: User } = {};
+  dictionary[user.username] = user;
+  return window.localStorage.setItem('users', JSON.stringify(dictionary));
+}
