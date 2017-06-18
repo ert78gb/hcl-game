@@ -5,8 +5,8 @@ export class PlayGamePage {
     return browser.get('/play-game');
   }
 
-  getH1Text(){
-   return element(by.css('h1')).getText();
+  getH1Text() {
+    return element(by.css('h1')).getText();
   }
 
   setTip(tip: number) {
